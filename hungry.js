@@ -1,19 +1,21 @@
-// fetch('https://www.themealdb.com/api/json/v1/1/search.php?f=a')
-// .then(res => res.json())
-// .then(data => displayFood(data))
-
-// const displayFood = foods =>{
-//     console.log(foods.meals[0].strMeal);
-// }
-
 const searchBtn = document.getElementById('search-button');
-searchBtn.addEventListener('click', () => {
+const foodArea = document.getElementById('show-food');
+searchBtn.addEventListener('click', function() {
     const foodName = document.getElementById('food-name').value;
+    const message = document.getElementById('message');
+    if(foodName===""){
+        message.innerHTML=`
+        <h1> please search first </h1>
+        `
+        foodArea.style.display='none'
+
+    }
     displayFood(foodName)
 })
 
 
-const foodArea = document.getElementById('show-food');
+
+
 
 function displayFood(food) {
     fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${food}`)
@@ -27,6 +29,7 @@ function displayFood(food) {
                 .map(food => {
                     const singleFood = `
                     <div class="col-md-3" id="single-food" onclick='displayFoodIngredients("${food.strMeal}")'>
+                    
             
                     <div class="card">
                     <img src="${food.strMealThumb}">
@@ -43,7 +46,7 @@ function displayFood(food) {
             foodArea.innerHTML = previousHTML;
 
         })
-    //.catch(err => console.log(err.message))
+
 }
 
 const displayFoodIngredients = food => {
@@ -58,8 +61,8 @@ const displayFoodIngredients = food => {
 
 const displayFoodIngredient = food => {
     const foodIngredientDiv = document.getElementById('single-food-details');
-    
-    
+
+
 
     foodIngredientDiv.innerHTML = `
         <img src="${food.strMealThumb}">
@@ -76,21 +79,3 @@ const displayFoodIngredient = food => {
     `;
 };
 
-
-
-    // .then(res=> res.json())
-    // .then(data=> {
-    //     data.meals
-    //     .map(singleFood => {
-    //         foodIngredient.innerHTML=`
-    //         <img src="${singleFood.strMealThumb}">
-    // //         `
-    //     })
-
-    // })
-
-
-
-
-
-// fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${food}`)
