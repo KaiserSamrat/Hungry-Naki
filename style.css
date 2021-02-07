@@ -1,0 +1,22 @@
+.search-food{
+    text-align: center;
+    margin-top: 20px;
+}
+
+#single-food{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 10px;
+    width: 30%;
+    
+}
+#single-food img{
+    height: 300px;
+}
+#single-food-details{
+    margin-top: 20px;
+    
+}
+#single-food-details img{
+    height: 300px;
+}
