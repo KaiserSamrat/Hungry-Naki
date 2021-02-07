@@ -1,5 +1,6 @@
 const searchBtn = document.getElementById('search-button');
 const foodArea = document.getElementById('show-food');
+const detailsArea = document.getElementById('single-food-details');
 searchBtn.addEventListener('click', function() {
     const foodName = document.getElementById('food-name').value;
     const message = document.getElementById('message');
@@ -8,6 +9,7 @@ searchBtn.addEventListener('click', function() {
         <h1> please search first </h1>
         `
         foodArea.style.display='none'
+        detailsArea.style.display='none'
 
     }
     displayFood(foodName)
