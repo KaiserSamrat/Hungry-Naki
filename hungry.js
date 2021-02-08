@@ -20,16 +20,13 @@ searchBtn.addEventListener('click', function () {
 })
 
 
-
-
-
 function displayFood(food) {
     fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${food}`)
         .then(res => res.json())
         .then(data => {
 
             let previousHTML = foodArea.innerHTML;
-            document.getElementById('food-name').innerText = food.strMeal || "No food found";
+            //document.getElementById('food-name').value = food.strMeal || "No food found";
 
             data.meals
                 .map(food => {
