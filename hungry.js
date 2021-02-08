@@ -9,7 +9,6 @@ searchBtn.addEventListener('click', function () {
     const message = document.getElementById('message');
     if (foodName === "") {
         message.style.display = 'block'
-        detailsArea.style.display='none'
 
     }
     else {
