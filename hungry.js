@@ -4,15 +4,12 @@ const detailsArea = document.getElementById('single-food-details');
 const message = document.getElementById('message')
 searchBtn.addEventListener('click', function () {
     document.getElementById('show-food').innerHTML = "";
+    detailsArea.innerHTML="";
     const foodName = document.getElementById('food-name').value;
     const message = document.getElementById('message');
     if (foodName === "") {
         message.style.display = 'block'
-        // message.innerHTML=`
-        // <h1> please search first </h1>
-        // `
-        // food.style.display='none'
-        // detailsArea.style.display='none'
+        detailsArea.style.display='none'
 
     }
     else {
