@@ -23,3 +23,9 @@
 #not-found{
     display: none;
 }
+#message{
+    color: brown;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+}
