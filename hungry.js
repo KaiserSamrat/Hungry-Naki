@@ -77,6 +77,11 @@ const displayFoodIngredient = food => {
             <li>${food.strIngredient4}</li>
             <li>${food.strIngredient5}</li>
             <li>${food.strIngredient6}</li>
+            <li>${food.strIngredient7}</li>
+            <li>${food.strIngredient8}</li>
+            <li>${food.strIngredient9}</li>
+            <li>${food.strIngredient10}</li>
+          
         </ul>
     `;
 };
